@@ -72,9 +72,24 @@ public class Email {
         return new String(password);
     }
     //set the mailbox capacity
+    //public API 
+    public void setMailbocCapacity(int capacity){
+        
+        this.mailboxCapacity = capacity;
+    }
     
     //set the alternate email
+    public void setAlternateEmail(String altEmail){
+        this.alternateEmail = altEmail;
+    }
+    
     
     //change the password
-    
+    public void changePassword(String password){
+        this.password = password;
+    }
+    //public method that going to access the property 
+    public int getMailbox(){ return mailboxCapacity;}
+    public String getAlternateEmail(){return alternateEmail;}
+    public String getPassword(){return password;}
 }
