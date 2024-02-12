@@ -11,12 +11,12 @@ public class Email {
     private String department;
     private String alternateEmail;
     private String email;
-    private String companySuffix = "shitycompany.com";
+    private String companySuffix = "abcompany.com";
     private int mailboxCapacity=500;
     //set the length!
     private int defaultPasswordLength =10; //define the length to randomize what is the limit long characters
     
-    
+    //main = constructor i think
     //constructor to recieve the first name and last name
     public Email (String firstname, String lastname){
         this.firstname = firstname;
@@ -92,4 +92,10 @@ public class Email {
     public int getMailbox(){ return mailboxCapacity;}
     public String getAlternateEmail(){return alternateEmail;}
     public String getPassword(){return password;}
+    
+    public String showInfo(){
+        return "\nDISPLAY NAME: " + firstname + " " + lastname + 
+                "\nCOMPANY EMAIL: " + email +
+                "\nMAILBOX CAPCITY: " + mailboxCapacity + "mb";
+    }
 }

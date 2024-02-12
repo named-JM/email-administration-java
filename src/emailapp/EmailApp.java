@@ -1,6 +1,8 @@
 
 package emailapp;
 
+import java.util.Scanner;
+
 /**
 Email Application
 * you are an it support administrator specialist and are charged
@@ -19,10 +21,20 @@ public class EmailApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //code here 
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter your Firstname: ");
+        String firstname = scan.next();
+        
+        System.out.print("Enter your Lastname: ");
+        String lastname = scan.next();
+        
                             //firstname, lasstname
-        Email em1 = new Email("John", "Smith");
-        em1.setAlternateEmail("j@gmail.com");
-        System.out.println(em1.getAlternateEmail());
+        Email em1 = new Email(firstname, lastname);
+//        em1.setAlternateEmail("j@gmail.com");
+//        System.out.println(em1.getAlternateEmail());
+        scan.close();
+        System.out.println(em1.showInfo());
     }
     
 }
